@@ -1,13 +1,14 @@
 {
     "BOT": "Hi there!\nI’m the personal bot of Unni Nambiar from Bangalore.\n![unni](https://raw.githubusercontent.com/unninambiar/UnniBot/master/img/profile.jpg)\nWant to know more about bots or learn about Unni? %[I'm here for the bot](postback:here_for_the_bot) %[Learn about Unni](postback:learn_about_unni)",
-    "I'M HERE FOR THE BOT": "Message1",
-    "LEARN ABOUT UNNI": "Message2",
-    "HELLO": "Hey, I'm so glad you're chatting with me! Do you want to tell Unni that you're talking to his bot? %[Tell him](postback:twitter)",
+    "I'M HERE FOR THE BOT": "Super!  Just say HELLO to get started.",
+    "LEARN ABOUT UNNI": "Unni is currently hacking bots in his spare time (which he has very little off, hence the bots!)\nYou can reach him a number of ways. %[Tweet Unni](http://bit.ly/2bd3HlQ) %[Email Unni](postback:email_unni)",
+    "EMAIL UNNI": "You can reach Unni Nambiar at unni.nambiar@gmail.com.",
+    "HELLO": "Hey, I'm so glad you're chatting with me!\nDo you want to tell Unni that you're talking to his bot? %[Tell him](postback:twitter)",
     "TELL HIM": "Let's tweet @ Unni so he knows you're setting a bot up. Here's a tweet that's ready to go: %[Tweet Unni](http://bit.ly/2bd3HlQ)",
     "I LOVE YOU": "Awh, shucks! I love you too!",
     "HELP": "I'll try, but I'm still learning.",
     "NO": "I'm so sorry that I didn't get that.  Would you like to teach me? %[Teach UnniBot](postback:twitter)",
-    "TEACH UNNIBOT": "Ok.  Great!  Type a question you would like me to learn to answer and if possible type the answer also.  I probably will not understand it now, but I'll try and learn it the next time.",
+    "TEACH UNNIBOT": "Ok.  Great!  Type a question you would like me to learn to answer and if possible type the answer also.\nI probably will not understand it now, but I'll try and learn it the next time.",
     "CONNECT ME": "",
     "DISCONNECT": "Roger that, UnniBot is back."
 }
