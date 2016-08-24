@@ -4,7 +4,7 @@
     "LEARN ABOUT UNNI": "Unni is currently hacking bots in his spare time (which he has very little of, hence the bots!)\nYou can reach him a number of ways. %[Tweet Unni](http://bit.ly/2bd3HlQ) %[Email Unni](postback:email_unni)",
     "EMAIL UNNI": "You can reach Unni Nambiar at unni.nambiar@gmail.com.",
     "HELLO": "Hey, I'm so glad you're chatting with me!\nDo you want to tell Unni that you're talking to his bot? %[Tell him](postback:twitter)",
-    "TELL HIM": "Let's tweet @ Unni so he knows you're setting a bot up. Here's a tweet that's ready to go: %[Tweet Unni](http://bit.ly/2bd3HlQ)",
+    "TELL HIM": "Let's tweet @ Unni so he knows you're chatting with his bot. Here's a tweet that's ready to go: %[Tweet Unni](http://bit.ly/2bd3HlQ)",
     "I LOVE YOU": "Awh, shucks! I love you too!",
     "HELP": "I'll try, but I'm still learning.",
     "NO": "Ok. Got that.  Would you like to teach me? %[Teach UnniBot](postback:teach)",
