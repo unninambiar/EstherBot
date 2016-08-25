@@ -13,7 +13,17 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi, I\'m Unni\'s Bot. I\'m learning how to handle some basic queries. Talk to me so I can learn what you want.  I\'m not too smart right now, but I\'ll try my best.  Just say HELLO to get started.')
+            return bot.say('Hi, I\'m Unni\'s Bot. I\'m learning how to handle some basic queries. Talk to me so I can learn what you want.  I\'m not too smart right now, but I\'ll try my best.  What\'s your name?')
+                .then(() => 'askName');
+        }
+    },
+
+    askName: {
+        //prompt: (bot) => bot.say('What\'s your name?'),
+        receive: (bot, message) => {
+            const name = message.text;
+            return bot.setProp('name', name)
+                .then(() => bot.say('Great! I\'ll call you ${name} Just say HELLO to get started.'))
                 .then(() => 'speak');
         }
     },
@@ -44,7 +54,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I haven't learnt how to respond to that yet.  But I will the next time you talk to me ... I hope.`).then(() => 'speak');
+                    return bot.say('I haven\'t learnt how to respond to that yet.  But I will the next time you talk to me ... I hope.').then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
