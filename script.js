@@ -43,7 +43,6 @@ module.exports = new Script({
         receive: (bot, message) => {
             response = message.text;
             const newRule = question + ': ' + response;
-//            scriptRules = _.concat(scriptRules, newRule);
             return bot.say(newRule)
                 .then(() => bot.say('Great! I\'ll ask Unni to teach this to me. Thanks a lot.'))
                 .then(() => 'speak');
