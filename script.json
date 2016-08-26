@@ -11,7 +11,7 @@
     "I LUV YOU": "Awh, shucks! I love you too!",
     "I LUV YOU!": "Awh, shucks! I love you too!",
     "HELP": "I'll try, but I'm still learning.",
-    "NO": "Ok. Got that.  If you would you like to teach me, click Teach UnniBot below, else just say someting else? %[Teach UnniBot](postback:teach)",
+    "NO": "Ok. Got that.  If you would you like to teach me, click Teach UnniBot below, else just say something else? %[Teach UnniBot](postback:teach)",
     "NOT INTERESTED": "Fair enough.  Would you like to teach me something? %[Teach UnniBot](postback:teach)",
     "SOMETHING ELSE": "Ok. Wkat else would you like to talk about?  I may or may not understand it, but I'll try.",
     "BYE": "Thanks for chatting with me.  Come back soon.  Goodbye!",
