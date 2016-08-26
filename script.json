@@ -14,7 +14,6 @@
     "NO": "Ok. Got that.  If you would you like to teach me, click Teach UnniBot below, else just say someting else? %[Teach UnniBot](postback:teach)",
     "NOT INTERESTED": "Fair enough.  Would you like to teach me something? %[Teach UnniBot](postback:teach)",
     "SOMETHING ELSE": "Ok. Wkat else would you like to talk about?  I may or may not understand it, but I'll try.",
-    "TEACH UNNIBOT": "",
     "BYE": "Thanks for chatting with me.  Come back soon.  Goodbye!",
     "GOODBYE": "Thanks for chatting with me.  Come back soon.  Goodbye!",
     "BYE!": "Thanks for chatting with me.  Come back soon.  Goodbye!",
@@ -28,6 +27,8 @@
     "SIGNING OUT!": "Thanks for chatting with me.  Come back soon.  Goodbye!",
     "CIAO": "Thanks for chatting with me.  Come back soon.  Goodbye!",
     "CIAO!": "Thanks for chatting with me.  Come back soon.  Goodbye!",
+    "TEACH UNNIBOT": "",
+    "RESTART": "",
     "CONNECT ME": "",
     "DISCONNECT": "Roger that, UnniBot is back."
 }
