@@ -43,7 +43,7 @@ module.exports = new Script({
             const response = message.text;
             return bot.setProp('response', response)
                 .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
-                .then(() => scriptRules.push("${question}: ${response}"))
+                .then(() => _.concat(scriptRules, '${question}: ${response}')
                 .then(() => 'speak');
         }
     },
