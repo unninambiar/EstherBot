@@ -15,17 +15,17 @@ module.exports = new Script({
 
     start: {
         receive: (bot) => {
-            return bot.say('Hi, I\'m Unni\'s Bot. I\'m learning how to handle some basic queries. Talk to me so I can learn what you want.  I\'m not too smart right now, but I\'ll try my best.  What\'s your name?')
+            return bot.say('Hi, I\'m Unni\'s Bot. I\'m learning how to handle some basic queries. Talk to me so I can learn what you want.  I\'m not too smart right now, but I\'ll try my best.')
                 .then(() => 'askName');
         }
     },
 
     askName: {
-        //prompt: (bot) => bot.say('What\'s your name?'),
+        prompt: (bot) => bot.say('What\'s your name?'),
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say(`Great! I\'ll call you ${name} Just say HELLO to get started.`))
+                .then(() => bot.say(`Great! I\'ll call you ${name}. Just say HELLO to get started.`))
                 .then(() => 'speak');
         }
     },
@@ -34,8 +34,6 @@ module.exports = new Script({
         prompt: (bot) => bot.say('Type in the message I should learn.'),
         receive: (bot, message) => {
             question = message.text.trim().toUpperCase();
-//            return bot.setProp('question', question)
-//                .then(() => 'askResponse');
             return Promise.resolve("askResponse");
         }
     },
@@ -47,7 +45,7 @@ module.exports = new Script({
             const newRule = question + ': ' + response;
 //            scriptRules = _.concat(scriptRules, newRule);
             return bot.say(newRule)
-                .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
+                .then(() => bot.say('Great! I\'ll ask Unni to teach this to me. Thanks a lot.'))
                 .then(() => 'speak');
         }
     },
