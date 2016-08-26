@@ -46,7 +46,7 @@ module.exports = new Script({
             response = message.text;
             const newRule = question + ': ' + response;
 //            scriptRules = _.concat(scriptRules, newRule);
-            return bot.say(newRule))
+            return bot.say(newRule)
                 .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
                 .then(() => 'speak');
         }
