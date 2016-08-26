@@ -40,7 +40,10 @@ module.exports = new Script({
     askResponse: {
         prompt: (bot) => bot.say('Type in the response I should learn for this message.'),
         receive: (bot, message) => {
+            const question = bot.getProp('question');
             const response = message.text;
+            const newRule = question + ': ' + response;
+            scriptRules = _.concat(scriptRules, newRule);
             return bot.setProp('response', response)
                 .then(() => bot.say(`${question} : ${response}`))
                 .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
