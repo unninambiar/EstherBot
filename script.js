@@ -4,6 +4,8 @@ const _ = require('lodash');
 const Script = require('smooch-bot').Script;
 
 var scriptRules = require('./script.json');
+var question = '';
+var response = '';
 
 module.exports = new Script({
     processing: {
@@ -31,7 +33,7 @@ module.exports = new Script({
     askQuestion: {
         prompt: (bot) => bot.say('Type in the message I should learn.'),
         receive: (bot, message) => {
-            const question = message.text.trim().toUpperCase();
+            question = message.text.trim().toUpperCase();
             return bot.setProp('question', question)
                 .then(() => 'askResponse');
         }
@@ -40,12 +42,10 @@ module.exports = new Script({
     askResponse: {
         prompt: (bot) => bot.say('Type in the response I should learn for this message.'),
         receive: (bot, message) => {
-            const question = bot.getProp('question');
-            const response = message.text;
+            response = message.text;
             const newRule = question + ': ' + response;
             scriptRules = _.concat(scriptRules, newRule);
             return bot.setProp('response', response)
-                .then(() => bot.say(`${question} : ${response}`))
                 .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
                 .then(() => 'speak');
         }
