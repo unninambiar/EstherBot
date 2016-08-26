@@ -7,7 +7,7 @@
     "HELLO!": "Hey, I'm so glad you're chatting with me!\nDo you want to tell Unni that you're talking to his bot? %[Tell him](postback:twitter)",
     "TELL HIM": "Let's tweet @ Unni so he knows you're chatting with his bot. Here's a tweet that's ready to go: %[Tweet Unni](http://bit.ly/2bd3HlQ)",
     "I LOVE YOU": "Awh, shucks! I love you too!",
-    "HELP": "I'll try, but I'm still learning.",
+    "HELP*": "I'll try, but I'm still learning.",
     "NO": "Ok. Got that.  If you would you like to teach me, click Teach UnniBot below, else just say someting else? %[Teach UnniBot](postback:teach)",
     "NOT INTERESTED": "Fair enough.  Would you like to teach me something? %[Teach UnniBot](postback:teach)",
     "SOMETHING ELSE": "Ok. Wkat else would you like to talk about?  I may or may not understand it, but I'll try.",
