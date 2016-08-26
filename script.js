@@ -43,7 +43,7 @@ module.exports = new Script({
             const response = message.text;
             return bot.setProp('response', response)
                 .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
-                .then(() => function(){scriptRules = _.concat(scriptRules, '${question}: ${response}');}
+//                .then(() => function(){scriptRules = _.concat(scriptRules, '${question}: ${response}');}
                 .then(() => 'speak');
         }
     },
@@ -73,6 +73,11 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
+                if (bot.getProp("teach")) {
+                    scriptRules = _.concat(scriptRules, '${question}: ${response}');
+                    bot.setProp("teach", false);
+                }
+
                 if (!_.has(scriptRules, upperText)) {
                     return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
                         .then(() => 'speak');
@@ -83,7 +88,8 @@ module.exports = new Script({
                         return bot.say('Ok. Let\'s start again.')
                             .then(() => 'start');
                     case "TEACH UNNIBOT":
-                        return bot.say('Ok. Great! Let\'s get started.')
+                        return bot.setProp("teach", true)
+                            .then(() => bot.say('Ok. Great! Let\'s get started.'))
                             .then(() => 'askQuestion');
                     default:
                         break;
