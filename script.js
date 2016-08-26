@@ -28,6 +28,26 @@ module.exports = new Script({
         }
     },
 
+    askQuestion: {
+        prompt: (bot) => bot.say('Type in the message I should learn.'),
+        receive: (bot, message) => {
+            const question = message.text;
+            return bot.setProp('question', question)
+                .then(() => 'askResponse');
+        }
+    },
+
+    askResponse: {
+        prompt: (bot) => bot.say('Type in the response I should learn for this message.'),
+        receive: (bot, message) => {
+            const response = message.text;
+            return bot.setProp('response', response)
+                .then(() => bot.say('Great! I\'ve learn\'t it.  Try me. '))
+                .then(() => ScriptRules.push('${question}: ${response}'))
+                .then(() => 'speak');
+        }
+    },
+
     speak: {
         receive: (bot, message) => {
 
@@ -54,7 +74,16 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`).then(() => 'speak');
+                    return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
+                        .then(() => 'speak');
+                }
+
+                switch (upperText) {
+                    case "TEACH UNNIBOT":
+                        return bot.say('Ok. Great! Let\'s get started.')
+                            .then(() => 'askQuestion');
+                    default:
+                        break;
                 }
 
                 var response = scriptRules[upperText];
