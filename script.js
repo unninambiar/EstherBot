@@ -54,7 +54,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say('I haven\'t learnt how to respond to that yet.  But I will the next time you talk to me ... I hope.').then(() => 'speak');
+                    return bot.say('I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot] (postback:teach)').then(() => 'speak');
                 }
 
                 var response = scriptRules[upperText];
