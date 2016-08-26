@@ -31,7 +31,7 @@ module.exports = new Script({
     askQuestion: {
         prompt: (bot) => bot.say('Type in the message I should learn.'),
         receive: (bot, message) => {
-            const question = message.text;
+            const question = message.text.trim().toUpperCase();
             return bot.setProp('question', question)
                 .then(() => 'askResponse');
         }
@@ -43,7 +43,7 @@ module.exports = new Script({
             const response = message.text;
             return bot.setProp('response', response)
                 .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
-//                .then(() => ScriptRules.push("${question}.toUpperCase(): ${response}"))
+                .then(() => scriptRules.push("${question}: ${response}"))
                 .then(() => 'speak');
         }
     },
