@@ -43,7 +43,7 @@ module.exports = new Script({
             const response = message.text;
             return bot.setProp('response', response)
                 .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
-                .then(() => _.concat(scriptRules, '${question}: ${response}')
+                .then(() => scriptRules = _.concat(scriptRules, '${question}: ${response}')
                 .then(() => 'speak');
         }
     },
@@ -79,6 +79,9 @@ module.exports = new Script({
                 }
 
                 switch (upperText) {
+                    case "RESTART":
+                        return bot.say('Ok. Let\'s start again.')
+                            .then(() => 'start');
                     case "TEACH UNNIBOT":
                         return bot.say('Ok. Great! Let\'s get started.')
                             .then(() => 'askQuestion');
