@@ -42,8 +42,8 @@ module.exports = new Script({
         receive: (bot, message) => {
             const response = message.text;
             return bot.setProp('response', response)
-                .then(() => bot.say('Great! I\'ve learn\'t it.  Try me. '))
-                .then(() => ScriptRules.push('${question}: ${response}'))
+                .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
+//                .then(() => ScriptRules.push("${question}.toUpperCase(): ${response}"))
                 .then(() => 'speak');
         }
     },
