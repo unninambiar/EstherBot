@@ -73,10 +73,10 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
-                if (bot.getProp("teach")) {
-                    scriptRules = _.concat(scriptRules, '${question}: ${response}');
-                    bot.setProp("teach", false);
-                }
+//                if (bot.getProp("teach")) {
+//                    scriptRules = _.concat(scriptRules, '${question}: ${response}');
+//                    bot.setProp("teach", false);
+//                }
 
                 if (!_.has(scriptRules, upperText)) {
                     return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
