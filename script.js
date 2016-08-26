@@ -23,7 +23,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say('Great! I\'ll call you' + ${name} + 'Just say HELLO to get started.'))
+                .then(() => bot.say(`Great! I\'ll call you ${name} Just say HELLO to get started.`))
                 .then(() => 'speak');
         }
     },
@@ -42,7 +42,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const response = message.text;
             return bot.setProp('response', response)
-                .then(() => bot.say(${question} + ':' + ${response}))
+                .then(() => bot.say(`${question} : ${response}`))
                 .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
                 .then(() => 'speak');
         }
@@ -74,7 +74,7 @@ module.exports = new Script({
                 }
 
 //                if (bot.getProp("teach")) {
-//                    scriptRules = _.concat(scriptRules, '${question}: ${response}');
+//                    scriptRules = _.concat(scriptRules, `${question}: ${response}`);
 //                    bot.setProp("teach", false);
 //                }
 
