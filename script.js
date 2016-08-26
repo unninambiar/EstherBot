@@ -34,8 +34,9 @@ module.exports = new Script({
         prompt: (bot) => bot.say('Type in the message I should learn.'),
         receive: (bot, message) => {
             question = message.text.trim().toUpperCase();
-            return bot.setProp('question', question)
-                .then(() => 'askResponse');
+//            return bot.setProp('question', question)
+//                .then(() => 'askResponse');
+            return Promise.resolve("askResponse");
         }
     },
 
@@ -45,8 +46,7 @@ module.exports = new Script({
             response = message.text;
             const newRule = question + ': ' + response;
 //            scriptRules = _.concat(scriptRules, newRule);
-            return bot.setProp('response', response)
-                .then(() => bot.say(newRule))
+            return bot.say(newRule))
                 .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
                 .then(() => 'speak');
         }
@@ -77,11 +77,6 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
-//                if (bot.getProp("teach")) {
-//                    scriptRules = _.concat(scriptRules, `${question}: ${response}`);
-//                    bot.setProp("teach", false);
-//                }
-
                 if (!_.has(scriptRules, upperText)) {
                     return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
                         .then(() => 'speak');
@@ -92,8 +87,7 @@ module.exports = new Script({
                         return bot.say('Ok. Let\'s start again. Type anything to get me going.')
                             .then(() => 'start');
                     case "TEACH UNNIBOT":
-                        return bot.setProp("teach", true)
-                            .then(() => bot.say('Ok. Great! Let\'s get started.'))
+                        return bot.say('Ok. Great! Let\'s get started.')
                             .then(() => 'askQuestion');
                     default:
                         break;
