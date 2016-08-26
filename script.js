@@ -23,7 +23,7 @@ module.exports = new Script({
         receive: (bot, message) => {
             const name = message.text;
             return bot.setProp('name', name)
-                .then(() => bot.say('Great! I\'ll call you ${name} Just say HELLO to get started.'))
+                .then(() => bot.say('Great! I\'ll call you' + ${name} + 'Just say HELLO to get started.'))
                 .then(() => 'speak');
         }
     },
@@ -42,8 +42,8 @@ module.exports = new Script({
         receive: (bot, message) => {
             const response = message.text;
             return bot.setProp('response', response)
-                .then(() => bot.say('Great! I\'ve learnt it.  Try me. '))
-//                .then(() => function(){scriptRules = _.concat(scriptRules, '${question}: ${response}');}
+                .then(() => bot.say(${question} + ':' + ${response}))
+                .then(() => bot.say('Great! I\'ll ask Unni to add it to my dialogues. Thanks a lot.'))
                 .then(() => 'speak');
         }
     },
@@ -85,7 +85,7 @@ module.exports = new Script({
 
                 switch (upperText) {
                     case "RESTART":
-                        return bot.say('Ok. Let\'s start again.')
+                        return bot.say('Ok. Let\'s start again. Type anything to get me going.')
                             .then(() => 'start');
                     case "TEACH UNNIBOT":
                         return bot.setProp("teach", true)
