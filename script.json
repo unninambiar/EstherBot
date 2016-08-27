@@ -27,7 +27,7 @@
     "THERE IS A SANCTIONED BUILDING PLAN": "Is the floor and tower of the apartment you are considering listed on the Sanctioned Building Plan? %[Yes it is](postback:yes_sbp) %[No it is not](postback:no_sbp)",
     "THERE IS NO SANCTIONED BUILDING PLAN": "This is an illegal construction. We recommend not considering this property.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
     "THE SANCTIONED BUILDING PLAN IS IN PROGRESS":"We recommend you wait till the documents are available.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
-    "YES IT IS":"The property is safe to consider. Would you like to check another property? %[Quick Check](postback:quick_check)",
+    "YES IT IS":"The property is safe to consider.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
     "NO IT IS NOT": "This is an illegal construction. We recommend not considering this property.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
     "BYE": "Thanks for chatting with me.  Come back soon.  Goodbye!",
     "GOODBYE": "Thanks for chatting with me.  Come back soon.  Goodbye!",
