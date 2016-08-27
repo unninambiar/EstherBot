@@ -15,7 +15,7 @@
     "NOT INTERESTED": "Fair enough.  Would you like to teach me something? %[Teach UnniBot](postback:teach)",
     "SOMETHING ELSE": "Ok. Wkat else would you like to talk about?  I may or may not understand it, but I'll try.",
     "REALDOCS": "Welcome to the RealDocs Bot!\nI can help you do a Quick Check of your property. %[Quick Check](postback:quick_check)",
-    "QUICK CHECK": "Great! Click the following button to get started. %[Get Started](postback:get_started).",
+    "QUICK CHECK": "Great! Click the following button to get started. %[Get Started](postback:get_started)",
     "GET STARTED": "What is the status of this property? %[Ready to Occupy](postback:ready_to_occupy) %[Under Construction](postback:under_construction) %[Construction not Started](postback:not_started)",
     "READY TO OCCUPY": "How many floors does this unit have? %[Greater than 3](postback:greater_than_3) %[Less than or equal to 3](postback:less_than_3)",
     "UNDER CONSTRUCTION": "How many floors does this unit have? %[Greater than 3](postback:greater_than_3) %[Less than or equal to 3](postback:less_than_3)",
