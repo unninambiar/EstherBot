@@ -27,7 +27,7 @@
     "NO OCCUPANCY CERTIFICATE": "This is an illegal construction. We recommend not considering this property.\nWould you like to check another property? %[Quick Check](postback:quick_check) %[Thanks I'm Done](postback:thanks_done)",
     "GREATER THAN 3": "Is there a Commencement Certificate? %[Yes Absolutely](postback:cc_yes) %[No Commencement Certificate](postback:cc_no)",
     "LESS/EQUAL TO 3": "Is there a Sanctioned Building Plan? %[SBP is available](postback:sbp_yes) %[No SBP](postback:sbp_no) %[SBP in progress](postback:sbp_inprogress)",
-    "YES ABSOLUTELY": "Is there a Sanctioned Building Plan? %[There is a sanctioned building plan](postback:sbp_yes) %[There is no sanctioned building plan](postback:sbp_no) %[The sanctioned building plan is in progress](postback:sbp_inprogress)",
+    "YES ABSOLUTELY": "Is there a Sanctioned Building Plan? %[SBP is available](postback:sbp_yes) %[No SBP](postback:sbp_no) %[SBP in progress](postback:sbp_inprogress)",
     "NO COMMENCEMENT CERTIFICATE": "This is an illegal construction. We recommend not considering this property.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
     "SBP IS AVAILABLE": "Is the floor and tower of the apartment you are considering listed on the Sanctioned Building Plan? %[Yes it is](postback:yes_sbp) %[No it is not](postback:no_sbp)",
     "NO SBP": "This is an illegal construction. We recommend not considering this property.\nWould you like to check another property? %[Quick Check](postback:quick_check)",
