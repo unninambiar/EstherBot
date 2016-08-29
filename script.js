@@ -5,7 +5,7 @@ const Script = require('smooch-bot').Script;
 
 var scriptRules = require('./script.json');
 var question = '';
-var response = '';
+var reply = '';
 
 module.exports = new Script({
     processing: {
@@ -34,15 +34,15 @@ module.exports = new Script({
         prompt: (bot) => bot.say('Type in the message I should learn.'),
         receive: (bot, message) => {
             question = message.text.trim().toUpperCase();
-            return Promise.resolve("askResponse");
+            return Promise.resolve("askReply");
         }
     },
 
-    askResponse: {
+    askReply: {
         prompt: (bot) => bot.say('Type in the response I should learn for this message.'),
         receive: (bot, message) => {
-            response = message.text;
-            const newRule = question + ': ' + response;
+            reply = message.text;
+            const newRule = question + ': ' + reply;
             return bot.say(newRule)
                 .then(() => bot.say('Great! I\'ll ask Unni to teach this to me. Thanks a lot.'))
                 .then(() => 'speak');
@@ -75,8 +75,10 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
-                        .then(() => 'speak');
+                    if (!_.find(scriptRules, function(rule) { return _.isequal(rule[0], upperText); }) {
+                        return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
+                            .then(() => 'speak');
+                    }
                 }
 
                 switch (upperText) {
