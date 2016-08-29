@@ -6,6 +6,7 @@
     "(HELLO|HI).*": "Hi, I'm so glad you're chatting with me!\nDo you want to tell Unni that you're talking to his bot? %[Tell him](postback:twitter)",
     "TELL HIM": "Let's tweet @ Unni so he knows you're chatting with his bot. Here's a tweet that's ready to go: %[Tweet Unni](http://bit.ly/2bd3HlQ)",
 
+    "WHAT.*(YOUR|UR) NAME.*": "Duh, UnniBot!",
     "HOW (ARE|R)* (YOU|U) DOIN(G|')* *TODAY*.*": "I'm doing just awesome!  Thanks so much for asking.",
     "^.*UNNI.*NAME.*(^YOU|U).*": "Ok. You asked for it. It's Unnikrishnan Balakrishnan Nambiar.  Phew!!",
     "^.*HOW DO I USE THIS.*": "Just chat with me and teach me new stuff when I don't understand something.",
