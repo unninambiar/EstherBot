@@ -74,12 +74,14 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
-                if (!_.has(scriptRules, upperText)) {
-                    if (!_.forEach(scriptRules, function(value, key) { var re = new RegExp(key); return re.test(upperText); })) {
+                var response = '';
+
+//                if (!_.has(scriptRules, upperText)) {
+                    if (!_.forEach(scriptRules, function(value, key) { var re = new RegExp(key); response = value; return re.test(upperText); })) {
                         return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
                             .then(() => 'speak');
                     }
-                }
+ //               }
 
                 switch (upperText) {
                     case "RESTART":
@@ -92,7 +94,7 @@ module.exports = new Script({
                         break;
                 }
 
-                var response = scriptRules[upperText];
+//                var response = scriptRules[upperText];
                 var lines = response.split('\n');
 
                 var p = Promise.resolve();
