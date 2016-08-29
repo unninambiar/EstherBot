@@ -75,7 +75,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    if (!_.forEach(scriptRules, function(value, key) { console.log(key); return key.test(upperText); })) {
+                    if (!_.forEach(scriptRules, function(value, key) { var re = new RegExp(key); return re.test(upperText); })) {
                         return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
                             .then(() => 'speak');
                     }
