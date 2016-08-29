@@ -75,7 +75,7 @@ module.exports = new Script({
                 }
 
                 if (!_.has(scriptRules, upperText)) {
-                    if (!_.find(scriptRules, function(rule) { console.log(rule); return _.isEqual(rule, upperText); })) {
+                    if (!_.find(scriptRules, function(rule) { return _.isEqual('Hello.*', upperText); })) {
                         return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
                             .then(() => 'speak');
                     }
