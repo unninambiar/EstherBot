@@ -74,13 +74,13 @@ module.exports = new Script({
                     return Promise.resolve("speak");
                 }
 
-                var response = '';
+                var keyText = '';
 
 //                if (!_.has(scriptRules, upperText)) {
-                    if (!_.forEach(scriptRules, function(value, key) { var re = new RegExp(key); response = value; return re.test(upperText); })) {
-                        return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
-                            .then(() => 'speak');
-                    }
+                if (!_.find(scriptRules, function(value, key) { var re = new RegExp(key); keyText = key; return re.test(upperText); })) {
+                    return bot.say(`I haven\'t learnt how to respond to that yet.  Would you like to teach me?  %[Teach UnniBot](postback:teach)`)
+                        .then(() => 'speak');
+                }
  //               }
 
                 switch (upperText) {
@@ -94,7 +94,9 @@ module.exports = new Script({
                         break;
                 }
 
-//                var response = scriptRules[upperText];
+                console.log(keyText);
+
+                var response = scriptRules[keyText];
                 var lines = response.split('\n');
 
                 var p = Promise.resolve();
