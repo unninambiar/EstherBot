@@ -8,6 +8,7 @@
 
     "GOOD (MORNING|DAY).*": "Good Morning to you too.  How are you today?",
     "GOOD EVENING.*": "Good Evening to you too.  How was your day today?",
+    "I'M GOOD.*": "That's great. You can chat with me. Or you can teach me something by clicking this button. %[Teach Unnibot](postback:teach)",
     "^.*WHAT.*(YOUR|UR) NAME.*": "Duh, UnniBot!",
     "^.*HOW (ARE|R)* (YOU|U) DOIN(G|')* *TODAY*.*": "I'm doing just awesome!  Thanks so much for asking.",
     "^.*UNNI.*NAME.*(^YOU|U).*": "Ok. You asked for it. It's Unnikrishnan Balakrishnan Nambiar.  Phew!!",
