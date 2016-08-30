@@ -22,7 +22,7 @@
     "^.*HELP.*(YOU|U).*": "The best way to help me would be to teach me something new. Click this button. %[Teach Unnibot](postback:teach)",
     "YES.*": "Ok. Tell me more. Or click this button to teach me something new, %[Teach Unnibot](postback:teach)",
     "NO.*": "Ok. No problem.  If you would like to teach me something new, click Teach UnniBot below, else just chat with me. %[Teach UnniBot](postback:teach)",
-    "SURE.*": "Ok.",.
+    "SURE.*": "Ok.",
     "(OKAY|OK).*": "Okay.",
     "UGH.*": "Huh??",
     "NOT INTERESTED.*": "Fair enough. Would you like to teach me something? Click this button. %[Teach UnniBot](postback:teach)",
