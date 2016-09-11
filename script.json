@@ -10,7 +10,7 @@
     "GOOD EVENING.*": "Good Evening to you too.  How was your day today?",
     "I'M GOOD.*": "That's great. You can chat with me. Or you can teach me something by clicking this button. %[Teach Unnibot](postback:teach)",
     "^.*WHAT.*(YOUR|UR) NAME.*": "Duh, UnniBot!",
-    "^.*HOW (ARE|R)* (YOU|U) *DOIN(G|')* *TODAY*.*": "I'm doing just awesome!  Thanks so much for asking.",
+    "^.*HOW (ARE|R)* (YOU|U).*": "I'm doing just awesome!  Thanks so much for asking.",
     "^.*UNNI.*NAME.*(^YOU|U).*": "Ok. You asked for it. It's Unnikrishnan Balakrishnan Nambiar.  Phew!!",
     "^.*HOW DO I USE THIS.*": "Just chat with me and teach me new stuff when I don't understand something.",
     "^.*HOW OLD (ARE|R)* *(YOU|U).*": "I'm just a baby, right now!",
