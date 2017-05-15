@@ -16,6 +16,7 @@
     "^.*HOW OLD (ARE|R)* *(YOU|U).*": "I'm just a baby, right now!",
     "^.*WHEN.*(YOU|U).*BORN.*": "If you are asking when I was born, my birthday is August 21st 2016. I'm still just a baby.  :-)",
     "MY NAME IS.*": "So, glad to meet you.  I hope we become friends. If you want to learn more about Unni, then click this button? %[Learn about Unni](postback:learn_about_unni)",
+    ".^WHAT.*(YOUR|UR)*.*DO.*(YOU)*.*": "I'm built to learn how chat bots can be used to offload simple (or complex) tasks.  A kind of Conversational User Interface (CUI?).",
     ".^WHAT.*(YOUR|UR)*.*PURPOSE.*(YOU)*.*": "I'm built to learn how chat bots can be used to offload simple (or complex) tasks.  A kind of Conversational User Interface (CUI?).",
     "TEACH *UNNI.*": "If you are trying to teach me, you need to click this button. %[Teach Unnibot](postback:teach)",
     "^.*(LOVE|LUV) *(YOU|U)*.*": "Awh, shucks! I love you too!",
