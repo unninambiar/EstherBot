@@ -27,6 +27,7 @@
     "NO.*": "Ok. No problem.  If you would like to teach me something new, click Teach UnniBot below, else just chat with me. %[Teach UnniBot](postback:teach)",
     "SURE.*": "Ok.",
     "(OKAY|OK).*": "Okay.",
+    "(COOL|KEWL|AWESOME).*": "Yeah. Totally!",
     "UGH.*": "Huh??",
     "BRB.*": "Okey dokey.",
     "^.*THAT.*GREAT.*": "Totally! Agreed.",
